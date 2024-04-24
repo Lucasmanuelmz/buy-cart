@@ -1,0 +1,25 @@
+.slider-container {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.text-slider {
+    font-size: 1.2rem;
+    text-align: center;
+    color: #64ff00;
+}
+
+@media (max-width: 680px) {
+    .slider-container {
+        max-width: 300px;
+        overflow: hidden;
+        margin: auto;
+        background-color: blue;
+    }
+    .text-slider {
+        font-size: 12px;
+        font-weight: 700;
+    }
+}
