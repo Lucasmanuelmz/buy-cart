@@ -34,7 +34,8 @@ export default function Category() {
                             title={category.title}
                             id={category.id}
                             image={category.image}
-                            price={category.price} />
+                            price={category.price}
+                            rating={category.rating?.rate} />
                         </div>
                     ))
                     }

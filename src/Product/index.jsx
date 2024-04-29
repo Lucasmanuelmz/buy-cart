@@ -4,6 +4,7 @@ import Button from "../Button";
 import Icon from '@mdi/react';
 import { mdiNumericPositive1, mdiNumericNegative1 } from '@mdi/js';
 import ApiComponent from "../Api";
+import StarRating from "../StarRating";
 
 function ProductPage() {
      const [quantity, setQuantity] = useState(0);
@@ -68,7 +69,8 @@ function ProductPage() {
          <div className="d-container" key={products.id}>
             <div className="imag">
             <h2>{products.title}</h2>
-                <img className="imgs" src={products.image} alt={products.description} />
+                    <img className="imgs" src={products.image} alt={products.description} />
+                    <StarRating rating={products.rating?.rate} />
                 <Button text='Show about' className="car-btn" onClick={() => setShowDetail(!showDetail)} />
                  {showDetail &&
             <p>{products.description}</p>}
@@ -78,7 +80,8 @@ function ProductPage() {
             <div className="btn-container">
                 <Button className='increm-decrem' text={<Icon path={mdiNumericPositive1} size={1.3} />} onClick={handleSetQuantity} />
                 <input className="input" type="number" value={quantity} onChange={(e) => setQuantity(parseInt(e.target.value))} /> 
-                <Button className='increm-decrem' text={<Icon path={mdiNumericNegative1} size={1.3} />} onClick={decrementQuantity} />
+                        <Button className='increm-decrem' text={<Icon path={mdiNumericNegative1} size={1.3} />} onClick={decrementQuantity} />
+                       
             </div>
                 <div>
                     <h2>Total: ${totalPrice}</h2>

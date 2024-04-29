@@ -25,7 +25,7 @@ export default function BuyCart({ id,
                 <figcaption>{title}</figcaption>
                 <div className="rating">
                     <StarRating rating={rating} />
-                    <span>{rating}</span>
+                    <span className="spanRating">{rating}</span>
                 </div>
                 
                 <Button className='car-btn' onClick={handleBuy} text='Add to cart' />
@@ -36,10 +36,10 @@ export default function BuyCart({ id,
 }
 
 BuyCart.propTypes = {
-    image: PropTypes.string.isRequired,
-    description: PropTypes.string.isRequired,
-    title: PropTypes.string.isRequired,
-    id: PropTypes.number.isRequired,
-    price: PropTypes.number.isRequired,
+    image: PropTypes.string,
+    description: PropTypes.string,
+    title: PropTypes.string,
+    id: PropTypes.number,
+    price: PropTypes.number,
     rating: PropTypes.number
 };
