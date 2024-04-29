@@ -1,8 +1,7 @@
 import { PropTypes } from "prop-types";
 import Button from "../Button";
-import { FaRegStar } from "react-icons/fa";
-import { TiStarFullOutline, TiStarHalfOutline } from "react-icons/ti";
 import { useNavigate } from "react-router-dom";
+import StarRating from "../StarRating";
 
 export default function BuyCart({ id,
     price, image, description, title, rating }) {
@@ -25,9 +24,7 @@ export default function BuyCart({ id,
                 <h3>Price: $ {price}</h3>
                 <figcaption>{title}</figcaption>
                 <div className="rating">
-                    <FaRegStar />
-                    <TiStarFullOutline />
-                    <TiStarHalfOutline />
+                    <StarRating rating={rating} />
                     <span>{rating}</span>
                 </div>
                 

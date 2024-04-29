@@ -85,7 +85,7 @@ function ProductPage() {
                 </div>
             
                 <Button className='car-btn' text='Buy now' onClick={handleBuy} />
-          <p>{buyMessage}</p>
+          <p className="status-msg">{buyMessage}</p>
         </div>
         </div>
         <ApiComponent />

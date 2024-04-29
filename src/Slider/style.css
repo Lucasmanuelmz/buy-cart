@@ -16,10 +16,9 @@
         max-width: 300px;
         overflow: hidden;
         margin: auto;
-        background-color: blue;
     }
     .text-slider {
-        font-size: 12px;
+        font-size: 14px;
         font-weight: 700;
     }
 }
