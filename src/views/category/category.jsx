@@ -10,11 +10,28 @@ export function NewProductCategory() {
         <>
        {productCategory.map(product => (
         <div key={product.id} className="product">
+          <Link style={{
+            color: '#000', 
+            textDecoration: 'none',
+            display: 'flex',
+            justifyContent: 'space-between',
+            flexDirection: 'column'
+            }} to={`/product/${product.id}`}>
           <img src={product.image} alt="" className="card-image" />
-          <div className="card-desc">
-            <h4>{product.title}</h4>
-            <Link className="button" to={`/product/${product.id}`}>Go to cart</Link>
+          </Link>
+           <div>
+           <Link style={{
+            color: '#000', 
+            textDecoration: 'none',
+            display: 'flex',
+            justifyContent: 'space-between',
+            flexDirection: 'column'
+            }} to={`/product/${product.id}`}>
+          <h4>{product.title}</h4>
+            <h4>${product.price}</h4>
+          </Link> 
           </div>
+        
         </div>
        ))}
        </>
