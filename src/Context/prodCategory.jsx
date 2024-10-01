@@ -1,14 +1,10 @@
-// Importei hooks do React para gerenciamento de estado e contexto
 import {createContext, useContext, useEffect, useState} from 'react';
 
-// Criei um contexto para produtos filtrados por categoria
 const ProductByCategoryContext = createContext();
 
-// Provider para buscar e fornecer produtos baseados na categoria selecionada
 export function ProductByCategoryProvider({category, children}) {
   const [productCategory, setProductCategory] = useState([]);
 
-  // Efeito que busca produtos sempre que a categoria muda
   useEffect(() => {
     if(!category) return;
     fetch(`https://fakestoreapi.com/products/category/${category}`)
@@ -29,7 +25,6 @@ export function ProductByCategoryProvider({category, children}) {
     })
   },[category])
 
-// Retornando o contexto com os produtos da categoria para os componentes filhos
   return(
     <ProductByCategoryContext.Provider value ={{productCategory, setProductCategory}}>
       {children}
@@ -37,7 +32,6 @@ export function ProductByCategoryProvider({category, children}) {
   )
 }
 
-// Hook personalizado para acessar produtos da categoria em qualquer componente
 export function useProductByCategory() {
   const context = useContext(ProductByCategoryContext);
   if(!context) {

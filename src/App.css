@@ -25,9 +25,7 @@ html, body {
   margin: 0;
   padding: 0.4rem;
   background-color: #121212;
-  border-bottom: 0.010rem solid var(--card-backcolor);
   width: 100%;
-  border-bottom: solid 2px var(--color-special);
 }
 
 .navbar {
@@ -127,7 +125,7 @@ main {
 }
 
 .button {
-  background-color: #121212;
+  background-color: #608346;
   color: #fff;
   padding: 10px 15px;
   border: none;
@@ -186,4 +184,56 @@ main {
 .product-details img {
   max-width: 100px;
   max-height: 100px;
+}
+
+.main-land {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+section {
+  padding: 50px 0;
+}
+.section {
+  background-color: #121212;
+  padding: 40px 0;
+  margin: 0;
+}
+
+.header-section {
+  max-width: 600px;
+  color: var(--color-special);
+}
+
+.header-section {
+  line-height: 1.6;
+}
+
+.div-section {
+  max-width: 1280px;
+  margin: 0 auto;
+  display: flex;
+  padding: 10px;
+  justify-content: space-between;
+}
+
+.image {
+  max-width: 500px;
+  min-height: 200px;
+  display: block;
+  margin: 0;
+ 
+}
+
+.citation-section {
+  background-color: var(--card-backcolor);
+  padding: 100px 0;
+}
+
+.citation {
+  max-width: 700px;
+  margin: auto;
+  font-style: italic;
+  font-size: medium;
 }

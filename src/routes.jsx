@@ -5,6 +5,7 @@ import {ContextUser} from "./views/product";
 import { ProductCategory } from "./views/category";
 import Cart from "./views/cart";
 import { ProductProvider } from "./Context/product";
+import LandingPage from "./views/home/home";
 
 const router = createBrowserRouter([
   {
@@ -13,6 +14,10 @@ const router = createBrowserRouter([
     children: [
       {
         index: true,
+        element: <LandingPage />
+      },
+      {
+        path:'products/page',
         element: <HomePage />,
       },
       {
