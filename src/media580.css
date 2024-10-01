@@ -41,6 +41,7 @@
     background-color: var(--card-backcolor);
     box-shadow: 0 2px 4px #808080;
     z-index: 9999;
+    position: absolute;
   }
 
   .mobile-invisible {
@@ -117,7 +118,7 @@
   }
   
   .button {
-    background-color: #121212;
+    background-color: #608167;
     color: #fff;
     padding: 10px 15px;
     border: none;
@@ -177,5 +178,47 @@
   .product-details img {
     max-width: 100px;
     max-height: 100px;
+  }
+
+  .header-section {
+    max-width: 600px;
+    color: var(--color-special);
+  }
+  
+  .header-section {
+    line-height: 1.6;
+  }
+  
+  .div-section {
+    max-width: 100%;
+    margin: 5px;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    padding: 10px;
+  }
+
+  .card {
+    margin-top: 35px;
+  }
+  
+  .image {
+    max-width: 200px;
+    min-height: 200px;
+    display: block;
+    margin: 0;
+   
+  }
+  
+  .citation-section {
+    background-color: var(--card-backcolor);
+    padding: 50px 15px 50px 0;
+  }
+  
+  .citation {
+    width: 100%;
+    margin: 5px;
+    padding: 10px;
+    font-style: italic;
+    font-size: 14px;
   }
 }

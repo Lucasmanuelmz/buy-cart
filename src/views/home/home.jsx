@@ -32,7 +32,9 @@ export default function LandingPage() {
       <div className="container">
         {productsFilter.map(product => (
           <div key={product.id} className="product">
+            <Link to={`/product/${product.id}`}>
            <img className="card-image" src={product.image} alt={product.title} />
+           </Link>
            <h4>${product.price}</h4>
          </div>
         ))}  
