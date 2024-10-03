@@ -9,6 +9,7 @@ export function NewProductCategory() {
       {productCategory && (
         <>
        {productCategory.map(product => (
+        <>
         <div key={product.id} className="product">
           <Link style={{
             color: '#000', 
@@ -33,6 +34,7 @@ export function NewProductCategory() {
           </div>
         
         </div>
+        </>
        ))}
        </>
       )}

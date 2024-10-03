@@ -169,6 +169,7 @@
   }
   .product-details {
     max-width: 300px;
+    min-height: 300px;
     overflow-y: auto;
     padding: 20px;
   }

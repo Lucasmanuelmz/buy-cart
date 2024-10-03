@@ -42,7 +42,7 @@ export default function LandingPage() {
     </section>
     <section className="citation-section">
       <div className="citation">
-      <q style={{fontWeight: 600, lineHeight: 1.5}}>Fackshop exceeded all my expectations! I bought a TV and some home accessories, and I was impressed with the quality of the products and the fast delivery. The website is easy to navigate, and the deals are truly competitive. I will definitely shop here again. I highly recommend it to everyone!</q>
+      <q style={{fontWeight: 600, lineHeight: 1.5}}> Fackshop exceeded all my expectations! I bought a TV and some home accessories, and I was impressed with the quality of the products and the fast delivery. The website is easy to navigate, and the deals are truly competitive. I will definitely shop here again. I highly recommend it to everyone! </q>
       <span style={{textAlign: 'right', display: 'block', marginTop: '25px'}}>John Mario</span>
     </div>
     </section>

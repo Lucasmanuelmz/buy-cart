@@ -34,6 +34,7 @@ html, body {
   justify-content: space-between;
   align-items: center;
   margin: 0 auto;
+  padding: 0 20px;
 }
 
 .navlist {
@@ -65,15 +66,18 @@ html, body {
   justify-content: center;
   align-items: center;
   font-size: .8rem;
+  padding: 0 20px;
 }
 
 main {
   width: 100%;
+  padding: 10px;
+  margin: auto;
 }
 
 .container {
   max-width: 1280px;
-  padding: 5px;
+  padding: 5px 20px;
   margin: 2rem auto;
   display: flex;
   flex-wrap: wrap;
@@ -214,7 +218,7 @@ section {
   max-width: 1280px;
   margin: 0 auto;
   display: flex;
-  padding: 10px;
+  padding: 10px 20px;
   justify-content: space-between;
 }
 
@@ -236,4 +240,13 @@ section {
   margin: auto;
   font-style: italic;
   font-size: medium;
+}
+
+.cart-container {
+  max-width: 1280px;
+  padding: 0 20px;
+}
+
+.empty {
+  margin: 17% 40%;
 }
