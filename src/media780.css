@@ -63,17 +63,24 @@
     text-decoration: none;
     color: var(--text-color);
   }
-
   .container {
-    width: 100%;
-    margin: 2rem auto;
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-    gap: 1.5rem;
+    width: 100vw;
+    min-height: 100vh; 
   }
   
-  .product {
+  .content {
     width: 100%;
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;  
+    align-items: center;     
+    gap: 20px;
+  }
+  
+  
+  .product {
+    min-width: 200px;
     min-height: 200px;
     display: flex;
     background-color: #fff;

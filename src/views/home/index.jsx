@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import { useProducts } from "../../Context/products"
+import { Fragment } from "react";
 
 export default function HomePage() {
   const {products} = useProducts();
@@ -8,11 +9,16 @@ export default function HomePage() {
       <div style={{maxWidth: '800px', backgroundColor: '#e2d4d4', color: '#d40808', margin: '20px auto', borderRadius: '8px', padding: '5px'}}>
         <p style={{textAlign: 'center'}}>I am currently maintaining this project.</p>
       </div>
-      <h3 style={{textAlign: 'center', marginBottom: 50, color: '#333', fontSize: 26}}>All products</h3>
-      {products.length > 0 && (
-      
       <div className="container">
+      <h3 style={{marginBottom: 50, 
+        color: '#333', 
+        fontSize: 26,
+        alignSelf: "flex-start"
+        }}>All products</h3>
+      <div className="content">
         
+      {products.length > 0 && (
+        <Fragment>
         {products.map(product => (
           <div key={product.id} className="product">
             <Link className="link-product" to={`/product/${product.id}`}>
@@ -35,8 +41,10 @@ export default function HomePage() {
               </div>
           </div>
         ))}
-      </div>
+        </Fragment>
       )}
+      </div>
+      </div>
     </main>
   )
 }

@@ -3,6 +3,10 @@
   src: url('./assets/Comfortaa-Regular.ttf');
 }
 
+* {
+  box-sizing: border-box;
+}
+
 :root {
   --color-special: #f0ecec;
   --background-color: #F7F7F7;
@@ -79,10 +83,13 @@ main {
   max-width: 1280px;
   padding: 5px 20px;
   margin: 2rem auto;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  gap: 1.5rem;
+}
+
+.content {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  max-width: 1280px;
+  gap: 15px;
 }
 
 .product {
