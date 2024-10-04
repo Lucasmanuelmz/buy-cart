@@ -1,7 +1,7 @@
 @media (min-width: 581px) and (max-width: 780px) {
   .header {
     margin: 0;
-    padding: 0.6rem;
+    padding: 0.3rem;
     border-bottom: 0.010rem solid var(--card-backcolor);
     width: 100%;
     box-sizing: border-box;
@@ -225,5 +225,8 @@
     padding: 10px;
     font-style: italic;
     font-size: 14px;
+  }
+  .ocult-icon {
+    display: none;
   }
 }

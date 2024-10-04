@@ -3,6 +3,7 @@ import { RxHamburgerMenu } from "react-icons/rx";
 import { IoCloseOutline } from "react-icons/io5";
 import { useState } from "react";
 import { Link } from "react-router-dom";
+import { IoMdCart } from "react-icons/io";
 
 export default function Header() {
   const [hamburger, setHamburger] = useState(false);
@@ -44,10 +45,11 @@ export default function Header() {
               <RxHamburgerMenu size={30} color="#80B165" />
             )}
           </div>
+          <Link className="ocult-icon" to='/cart'><IoMdCart  size={30} color="#80B165"/></Link>
+        
         </div>
       </header>
 
-      {/* Mobile menu */}
       <div className={mobileVisibility}>
         {categories.length > 0 && (
           <ul className="nav-mobile">
@@ -56,8 +58,10 @@ export default function Header() {
                 <Link to={`/category/${category}`}>{category}</Link>
               </li>
             ))}
+           <Link to='/cart'><IoMdCart size={30} color="#80B165"/></Link>  
           </ul>
         )}
+        
       </div>
     </>
   );

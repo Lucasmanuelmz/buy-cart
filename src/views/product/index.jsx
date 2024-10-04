@@ -1,6 +1,7 @@
 import { ProductProvider, useProduct } from "../../Context/product";
 import { useParams, useNavigate } from "react-router-dom";
 import { useState } from "react";
+import { useCarts } from "../../Context/cartContext";
 
 
 export function ContextUser() {
@@ -16,6 +17,8 @@ export default function SingleProduct() {
   const [quantity, setQuantity] = useState(1);
   const navigate = useNavigate();
   const { product } = useProduct();
+  const {updateCarts} = useCarts();
+  const [notification, setNotification] = useState(false)
 
   const handleQuantityChange = (e) => {
     const value = Math.max(1, parseInt(e.target.value) || 1);
@@ -23,17 +26,24 @@ export default function SingleProduct() {
   };
   
   const handleAddToCart = () => {
+    const addProduct = {
+      productId: product.id,
+      quantity: quantity,
+      name: product.title,
+      price: product.price
+    }
+
+    updateCarts(addProduct);
+    setNotification(true)
+
     setTimeout(() => {
+      setNotification(false)
       navigate(`/cart`);
-    }, 300) 
+    }, 3000) 
   };
 
-  if (!product) {
-    return <div>Loading...</div>;
-  }
-
-  if (!product.id) { 
-    return <div>Product not found.</div>;
+  if (!product.id) {
+    return <div>Product not found</div>;
   }
 
   return (
@@ -58,6 +68,13 @@ export default function SingleProduct() {
             textAlign: "center",
           }}
         />
+      
+        {notification && (
+          <div className="notification">
+              <p>Added {quantity} to cart</p>
+          </div>
+        )}
+      
         <button
           onClick={handleAddToCart}
           style={{ marginTop: "25px" }}

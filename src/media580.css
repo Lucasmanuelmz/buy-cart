@@ -233,4 +233,8 @@
     font-style: italic;
     font-size: 14px;
   }
+
+  .ocult-icon {
+    display: none;
+  }
 }

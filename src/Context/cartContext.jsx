@@ -1,48 +1,49 @@
 import { createContext, useContext, useEffect, useState } from "react";
 
-const CartContext = createContext();
+const CartsContext = createContext();
 
-export function CartProvider({children }) {
-  const [cart, setCart] = useState(null);
+export function CartsProvider({ children }) {
+  const [carts, setCarts] = useState(() => {
+    const savedCarts = localStorage.getItem('carts');
+    try {
+      return savedCarts ? JSON.parse(savedCarts) : { products: [] };
+    } catch (error) {
+      console.error("Erro ao analisar o carrinho do localStorage:", error);
+      return { products: [] };
+    }
+  });
 
   useEffect(() => {
-    fetch(`https://fakestoreapi.com/carts`)
-      .then((response) => {
-        if (response.ok) {
-          return response.json();
-        }
-        throw new Error("Erro ao buscar o carrinho");
-      })
-      .then((data) => {
-        setCart(data);
-      })
-      .catch(error => console.log(error.message));
-  }, []);
+    localStorage.setItem('carts', JSON.stringify(carts));
+  }, [carts]);
 
-  function updateCart(newProduct) {
-    const productExists = cart.products.find((p) => p.productId === newProduct.productId);
+  function updateCarts(newProduct) {
+    if (!carts) return;
+
+    const productExists = carts.products.find((p) => p.productId === newProduct.productId);
 
     if (productExists) {
-      const updatedProducts = cart.products.map((p) =>
+      const updatedProducts = carts.products.map((p) =>
         p.productId === newProduct.productId
           ? { ...p, quantity: p.quantity + newProduct.quantity }
           : p
       );
-      setCart({ ...cart, products: updatedProducts });
+      setCarts({ ...carts, products: updatedProducts });
     } else {
-      setCart({ ...cart, products: [...cart.products, newProduct] });
+      const newCartProduct = { ...newProduct, quantity: newProduct.quantity || 1 }; 
+      setCarts({ ...carts, products: [...carts.products, newCartProduct] });
     }
   }
 
   return (
-    <CartContext.Provider value={{ cart, updateCart }}>
+    <CartsContext.Provider value={{ carts, updateCarts }}>
       {children}
-    </CartContext.Provider>
+    </CartsContext.Provider>
   );
 }
 
-export function useCart() {
-  const context = useContext(CartContext);
+export function useCarts() {
+  const context = useContext(CartsContext);
   if (!context) {
     throw new Error("Erro ao obter produtos do carrinho");
   }

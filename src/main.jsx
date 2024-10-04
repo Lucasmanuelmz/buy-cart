@@ -5,16 +5,16 @@ import { RouterProvider } from 'react-router-dom';
 import { CategoriesProvider } from './Context/categories.jsx';
 import { ProductsProvider} from './Context/products.jsx';
 import './index.css'
-import { CartProvider } from './Context/cartContext.jsx';
+import { CartsProvider } from './Context/cartContext.jsx';
 
 createRoot(document.getElementById('root')).render(
   
   <StrictMode>
     <CategoriesProvider>
       <ProductsProvider>
-        <CartProvider>
+        <CartsProvider>
         <RouterProvider router={router} />
-        </CartProvider>
+        </CartsProvider>
     </ProductsProvider>
     </CategoriesProvider>
   </StrictMode>
