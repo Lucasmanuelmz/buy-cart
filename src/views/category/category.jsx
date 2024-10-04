@@ -17,6 +17,7 @@ export function NewProductCategory() {
                   textDecoration: 'none',
                   display: 'flex',
                   justifyContent: 'space-between',
+                  alignItems: 'center',
                   flexDirection: 'column',
                 }}
                 to={`/product/${product.id}`}

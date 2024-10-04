@@ -6,9 +6,6 @@ export default function HomePage() {
   const {products} = useProducts();
   return(
     <main>
-      <div style={{maxWidth: '800px', backgroundColor: '#e2d4d4', color: '#d40808', margin: '20px auto', borderRadius: '8px', padding: '5px'}}>
-        <p style={{textAlign: 'center'}}>I am currently maintaining this project.</p>
-      </div>
       <div className="container">
       <h3 style={{marginBottom: 50, 
         color: '#333', 
