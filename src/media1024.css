@@ -53,13 +53,11 @@
     width: 100%;
     display: flex;
    flex-wrap: wrap;
-    justify-content: space-around;
-    align-items: center;
-    gap: 10px;
+    gap: 20px;
   }
   
   .product {
-    min-width: 200px;
+    min-width: 220px;
     min-height: 200px;
     display: flex;
     background-color: #fff;
@@ -69,7 +67,7 @@
     border-radius: 5px;
     border: 0.235px solid var(--card-backcolor);
     cursor: pointer;
-    padding: 20px;
+    padding: 10px;
   }
   
   .product .card-image {

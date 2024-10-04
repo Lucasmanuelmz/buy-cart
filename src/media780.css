@@ -72,15 +72,13 @@
     width: 100%;
     margin: auto;
     display: flex;
-    flex-wrap: wrap;
-    justify-content: center;  
-    align-items: center;     
+    flex-wrap: wrap;    
     gap: 20px;
   }
   
   
   .product {
-    min-width: 200px;
+    min-width: 220px;
     min-height: 200px;
     display: flex;
     background-color: #fff;

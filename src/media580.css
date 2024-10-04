@@ -79,8 +79,6 @@
     margin: auto;
     display: flex;
     flex-wrap: wrap;
-    justify-content: center;  /* Centraliza os itens filhos horizontalmente */
-    align-items: center;      /* Centraliza os itens filhos verticalmente */
     gap: 20px;
     box-sizing: border-box;
   }
