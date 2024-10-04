@@ -4,7 +4,7 @@ const CartsContext = createContext();
 
 export function CartsProvider({ children }) {
   const [carts, setCarts] = useState(() => {
-    const savedCarts = localStorage.getItem('carts');
+    const savedCarts = localStorage.getItem("carts");
     try {
       return savedCarts ? JSON.parse(savedCarts) : { products: [] };
     } catch (error) {
@@ -14,23 +14,28 @@ export function CartsProvider({ children }) {
   });
 
   useEffect(() => {
-    localStorage.setItem('carts', JSON.stringify(carts));
+    localStorage.setItem("carts", JSON.stringify(carts));
   }, [carts]);
 
   function updateCarts(newProduct) {
     if (!carts) return;
 
-    const productExists = carts.products.find((p) => p.productId === newProduct.productId);
+    const productExists = carts.products.find(
+      (p) => p.productId === newProduct.productId,
+    );
 
     if (productExists) {
       const updatedProducts = carts.products.map((p) =>
         p.productId === newProduct.productId
           ? { ...p, quantity: p.quantity + newProduct.quantity }
-          : p
+          : p,
       );
       setCarts({ ...carts, products: updatedProducts });
     } else {
-      const newCartProduct = { ...newProduct, quantity: newProduct.quantity || 1 }; 
+      const newCartProduct = {
+        ...newProduct,
+        quantity: newProduct.quantity || 1,
+      };
       setCarts({ ...carts, products: [...carts.products, newCartProduct] });
     }
   }

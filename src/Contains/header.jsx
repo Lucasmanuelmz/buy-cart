@@ -8,11 +8,13 @@ import { IoMdCart } from "react-icons/io";
 export default function Header() {
   const [hamburger, setHamburger] = useState(false);
   const { categories } = useCategories();
-  const [mobileVisibility, setMobileVisibility] = useState('mobile-invisible');
+  const [mobileVisibility, setMobileVisibility] = useState("mobile-invisible");
 
   function toggleVisibility() {
-    setMobileVisibility(prev => (prev === 'mobile-invisible' ? 'mobile-menu' : 'mobile-invisible'));
-    setHamburger(prev => !prev);
+    setMobileVisibility((prev) =>
+      prev === "mobile-invisible" ? "mobile-menu" : "mobile-invisible",
+    );
+    setHamburger((prev) => !prev);
   }
 
   return (
@@ -20,9 +22,29 @@ export default function Header() {
       <header className="header">
         <div className="navbar">
           <Link to={`/`}>
-            <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 100 100">
-              <circle cx="50" cy="50" r="48" fill="none" stroke="#80B165" strokeWidth="2" />
-              <text x="50%" y="50%" dominantBaseline="middle" textAnchor="middle" fontSize="40" fontFamily="Arial" fill="#80B165">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="40"
+              height="40"
+              viewBox="0 0 100 100"
+            >
+              <circle
+                cx="50"
+                cy="50"
+                r="48"
+                fill="none"
+                stroke="#80B165"
+                strokeWidth="2"
+              />
+              <text
+                x="50%"
+                y="50%"
+                dominantBaseline="middle"
+                textAnchor="middle"
+                fontSize="40"
+                fontFamily="Arial"
+                fill="#80B165"
+              >
                 ac
               </text>
             </svg>
@@ -45,8 +67,9 @@ export default function Header() {
               <RxHamburgerMenu size={30} color="#80B165" />
             )}
           </div>
-          <Link className="ocult-icon" to='/cart'><IoMdCart  size={30} color="#80B165"/></Link>
-        
+          <Link className="ocult-icon" to="/cart">
+            <IoMdCart size={30} color="#80B165" />
+          </Link>
         </div>
       </header>
 
@@ -58,10 +81,11 @@ export default function Header() {
                 <Link to={`/category/${category}`}>{category}</Link>
               </li>
             ))}
-           <Link to='/cart'><IoMdCart size={30} color="#80B165"/></Link>  
+            <Link to="/cart">
+              <IoMdCart size={30} color="#80B165" />
+            </Link>
           </ul>
         )}
-        
       </div>
     </>
   );

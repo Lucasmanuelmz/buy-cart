@@ -13,16 +13,20 @@ export function NewProductCategory() {
             <div key={product.id} className="product">
               <Link
                 style={{
-                  color: '#000',
-                  textDecoration: 'none',
-                  display: 'flex',
-                  justifyContent: 'space-between',
-                  alignItems: 'center',
-                  flexDirection: 'column',
+                  color: "#000",
+                  textDecoration: "none",
+                  display: "flex",
+                  justifyContent: "space-between",
+                  alignItems: "center",
+                  flexDirection: "column",
                 }}
                 to={`/product/${product.id}`}
               >
-                <img src={product.image} alt={product.title} className="card-image" />
+                <img
+                  src={product.image}
+                  alt={product.title}
+                  className="card-image"
+                />
                 <h4>{product.title}</h4>
                 <h4>${product.price}</h4>
               </Link>

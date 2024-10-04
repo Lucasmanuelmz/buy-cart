@@ -2,11 +2,11 @@
   .header {
     margin: 0;
     padding: 0.3rem;
-    border-bottom: 0.010rem solid var(--card-backcolor);
+    border-bottom: 0.01rem solid var(--card-backcolor);
     width: 100%;
     box-sizing: border-box;
   }
-  
+
   .navbar {
     max-width: 1280px;
     display: flex;
@@ -16,16 +16,16 @@
     box-sizing: border-box;
     padding: 0 1.5rem;
   }
-  
+
   .navlist {
-    display:  flex;
+    display: flex;
   }
-  
+
   .navlist li {
     padding: 0 0.625rem;
     list-style: none;
   }
-  
+
   .navlist a {
     font-size: 0.8rem;
     text-decoration: none;
@@ -52,11 +52,10 @@
   .content {
     width: 100%;
     display: flex;
-     flex-wrap: wrap;
+    flex-wrap: wrap;
     gap: 20px;
   }
-  
-  
+
   .product {
     width: 220px;
     min-height: 200px;
@@ -70,26 +69,25 @@
     cursor: pointer;
     padding: 10px;
   }
-  
+
   .product .card-image {
     max-height: 200px;
     max-width: 200px;
     overflow: hidden;
   }
-  
+
   .product h4 {
     text-transform: capitalize;
     font-size: 14px;
     padding: 10px;
     margin: 0px;
-    
   }
-  
+
   .product p {
     font-size: 12px;
-    line-height: 1,5;
+    line-height: 1, 5;
   }
-  
+
   .card-desc {
     padding: 8px;
     width: 100%;
@@ -100,7 +98,7 @@
     align-items: space-between;
     box-sizing: border-box;
   }
-  
+
   .button {
     background-color: #608167;
     color: #fff;
@@ -115,11 +113,11 @@
     text-decoration: none;
     font-size: 14px;
   }
-  
+
   .button:hover {
     background-color: #608147;
   }
-  
+
   .product-container {
     max-width: 800px;
     max-height: 400px;
@@ -132,20 +130,20 @@
     gap: 20px;
     color: #333;
   }
-  
+
   .product-container p {
     font-size: 14px;
     line-height: 1.6;
     text-transform: capitalize;
   }
-  
+
   .product-image {
     width: 400px;
     width: 400px;
     overflow-y: auto;
     padding: 20px;
   }
-  
+
   .product-image > .card-image {
     width: 380px;
     min-height: 380px;
@@ -157,9 +155,9 @@
     overflow-y: auto;
     padding: 20px;
   }
-  
+
   .product-details img {
     max-width: 100px;
     max-height: 100px;
-  } 
+  }
 }

@@ -1,6 +1,6 @@
 @font-face {
-  font-family: 'Comfortaa';
-  src: url('./assets/Comfortaa-Regular.ttf');
+  font-family: "Comfortaa";
+  src: url("./assets/Comfortaa-Regular.ttf");
 }
 
 * {
@@ -9,14 +9,15 @@
 
 :root {
   --color-special: #f0ecec;
-  --background-color: #F7F7F7;
-  --card-backcolor: #E0E0E0;
+  --background-color: #f7f7f7;
+  --card-backcolor: #e0e0e0;
   --text-color: #333333;
   --other-text: #000000;
-  --estilo-ortografica: 'Comfortaa';
+  --estilo-ortografica: "Comfortaa";
 }
 
-html, body {
+html,
+body {
   background-color: var(--background-color);
   font-family: var(--estilo-ortografica);
   margin: 0;
@@ -42,7 +43,7 @@ html, body {
 }
 
 .navlist {
-  display:  flex;
+  display: flex;
 }
 
 .navlist li {
@@ -69,7 +70,7 @@ html, body {
   display: flex;
   justify-content: center;
   align-items: center;
-  font-size: .8rem;
+  font-size: 0.8rem;
   padding: 0 20px;
 }
 
@@ -116,12 +117,11 @@ main {
   font-size: 14px;
   padding: 10px;
   margin: 0px;
-  
 }
 
 .product p {
   font-size: 12px;
-  line-height: 1,5;
+  line-height: 1, 5;
 }
 
 .card-desc {
@@ -234,7 +234,6 @@ section {
   min-height: 200px;
   display: block;
   margin: 0;
- 
 }
 
 .citation-section {
@@ -274,7 +273,7 @@ section {
   color: #fefefe;
   padding: 3px 10px;
   border-radius: 5px;
-  background-color: #4CAF50;
+  background-color: #4caf50;
   position: absolute;
   top: 50%;
   left: 50%;

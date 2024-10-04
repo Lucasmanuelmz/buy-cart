@@ -1,7 +1,7 @@
 import { createBrowserRouter } from "react-router-dom";
 import App from "./App";
 import HomePage from "./views/home";
-import {ContextUser} from "./views/product";
+import { ContextUser } from "./views/product";
 import { ProductCategory } from "./views/category";
 import Cart from "./views/cart";
 import { ProductProvider } from "./Context/product";
@@ -14,26 +14,30 @@ const router = createBrowserRouter([
     children: [
       {
         index: true,
-        element: <LandingPage />
+        element: <LandingPage />,
       },
       {
-        path:'products/page',
+        path: "products/page",
         element: <HomePage />,
       },
       {
-        path: 'product/:id',
-        element: <ContextUser />
+        path: "product/:id",
+        element: <ContextUser />,
       },
       {
-        path:'category/:category',
-        element: <ProductCategory/>
+        path: "category/:category",
+        element: <ProductCategory />,
       },
       {
-        path: 'cart',
+        path: "cart",
 
-        element:<ProductProvider><Cart /></ProductProvider> 
-      }
-    ]
+        element: (
+          <ProductProvider>
+            <Cart />
+          </ProductProvider>
+        ),
+      },
+    ],
   },
 ]);
 
