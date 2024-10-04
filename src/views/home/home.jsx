@@ -30,6 +30,7 @@ export default function LandingPage() {
     <section>
       <h2 style={{textAlign: 'center'}}>New Arrivals & Trends</h2>
       <div className="container">
+        <div className="content">
         {productsFilter.map(product => (
           <div key={product.id} className="product">
             <Link to={`/product/${product.id}`}>
@@ -37,7 +38,8 @@ export default function LandingPage() {
            </Link>
            <h4>${product.price}</h4>
          </div>
-        ))}  
+        ))}
+        </div>  
       </div>
     </section>
     <section className="citation-section">
